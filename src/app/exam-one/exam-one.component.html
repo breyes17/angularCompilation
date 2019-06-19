@@ -6,5 +6,5 @@
 </ol>
   <input type="text" class="form-control" [(ngModel)]="textInput" >
   <div class="mt-5"></div>
-  <p>{{ textInput }}</p>
+  <p [ngStyle]="{'color': addColor()}">{{ textInput }}</p>
   <button class="btn btn-primary"[disabled]="textInput.trim().length === 0" (click)="textInput = ''" >Reset</button>

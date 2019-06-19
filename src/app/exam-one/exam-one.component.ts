@@ -7,11 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExamOneComponent implements OnInit {
 
-  // textInput : string = "";
+    textInput = ''
 
   constructor() { }
 
   ngOnInit() {
   }
+
+addColor(){
+    if(this.textInput === 'red'){
+        return 'red'
+    }
+    else if(this.textInput === 'green'){
+        return 'green'
+    }
+    else {
+        return '#000'
+    }
+}
 
 }
