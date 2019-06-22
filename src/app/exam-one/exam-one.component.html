@@ -3,8 +3,10 @@
   <li>Output the usename porperty via String Interpolation</li>
   <li>Add a button which may only be clicked if the username is not an empty string</li>
   <li>Upon clicking the button the usename should be reset to an empty string</li>
+  <li>Use ngStyle and ngClass</li>
 </ol>
   <input type="text" class="form-control" [(ngModel)]="textInput" >
   <div class="mt-5"></div>
-  <p [ngStyle]="{'color': addColor()}">{{ textInput }}</p>
+  <p [ngStyle]="{'color': addColor()}" [ngClass]="{'bgreen': textInput.trim().toLowerCase() === 'green'}">{{ textInput }}</p>
+  <!-- <p [ngClass]="{'bgreen': textInput.trim() === 'green'}">{{ textInput }}</p> -->
   <button class="btn btn-primary"[disabled]="textInput.trim().length === 0" (click)="textInput = ''" >Reset</button>
